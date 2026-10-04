@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Photo album - Home</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html">
+        <h1>Photo album</h1>
+      </a>
+    </header>
+    
+    <!--
+      Breadcrumbs of parent albums
+    -->
+    
+    <!--
+      Nested albums
+    -->
+    <ul id="galleries">
+     <li>
+       <a href="Iliatha.html">
+         <h3>Iliatha</h3>
+         <div class="meta">
+           17 photos<br />
+           24 Feb 2021 - 25 Jul 2026
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Iliatha/Lumineth.png" /></li><li><img src="media/thumbs/Iliatha/Dawnriders.png" /></li><li><img src="media/thumbs/Iliatha/Wardens.png" /></li><li><img src="media/thumbs/Iliatha/Cathallar.png" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Nurgle.html">
+         <h3>Nurgle</h3>
+         <div class="meta">
+           6 photos<br />
+           12 Feb 2022 - 05 Nov 2022
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Nurgle/PlagueBearer1.jpg" /></li><li><img src="media/thumbs/Nurgle/Blightkings1.jpg" /></li><li><img src="media/thumbs/Nurgle/Blightlords.jpg" /></li><li><img src="media/thumbs/Nurgle/SpoilpoxScrivener.jpg" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Endless-Spell.html">
+         <h3>Endless Spell</h3>
+         <div class="meta">
+           3 photos<br />
+           12 Jul 2022 - 25 Jul 2026
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Endless%20Spell/PurpleSunOfShysh.jpg" /></li><li><img src="media/thumbs/Endless%20Spell/ChronomanticCogs.jpg" /></li><li><img src="media/thumbs/Endless%20Spell/krondspine.jpg" /></li><li><img src="public/missing.png" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Drukhari.html">
+         <h3>Drukhari</h3>
+         <div class="meta">
+           1 photo<br />
+           24 Oct 2023 - 24 Oct 2023
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Drukhari/BoardingPatrol_CombatPatrol.png" /></li><li><img src="public/missing.png" /></li><li><img src="public/missing.png" /></li><li><img src="public/missing.png" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Slaves-to-darkness.html">
+         <h3>Slaves to darkness</h3>
+         <div class="meta">
+           10 photos<br />
+           22 Jul 2026 - 23 Jul 2026
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Slaves%20to%20darkness/sorcerer_lord.jpg" /></li><li><img src="media/thumbs/Slaves%20to%20darkness/urkhan.jpg" /></li><li><img src="media/thumbs/Slaves%20to%20darkness/prince.jpg" /></li><li><img src="media/thumbs/Slaves%20to%20darkness/V_belakor.jpg" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Eldar.html">
+         <h3>Eldar</h3>
+         <div class="meta">
+           2 photos<br />
+           25 Jul 2026 - 25 Jul 2026
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Eldar/yvraine.jpg" /></li><li><img src="media/thumbs/Eldar/scorpions.jpg" /></li><li><img src="public/missing.png" /></li><li><img src="public/missing.png" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="Space-Marines.html">
+         <h3>Space Marines</h3>
+         <div class="meta">
+           1 photo<br />
+           25 Jul 2026 - 25 Jul 2026
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/Space%20Marines/hellblaster.jpg" /></li><li><img src="public/missing.png" /></li><li><img src="public/missing.png" /></li><li><img src="public/missing.png" /></li>     </ul>
+       </a>
+     </li>
+    </ul>
+    
+    <!--
+      Render all thumbnails
+    -->
+    <ul id="media">
+    </ul>
+    
+    <!--
+      Pagination
+    -->
+    
+    <!--
+      Zip file link
+    -->
+    
+    
+    <!--
+      Optional footer
+    -->
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
